@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Names from './components/names';
 
-function App() {
+class App extends Component {
+
+state = { boys : [ 'kelvin','marley','seun','kanye','john','paul'] ,
+  girls : ['bola','ayo','ola','rebecca','rachael','elizabeth']
+}
+
+generateName = (name) => {
+  if (name === 'boy') alert('Your baby name is : ' + this.state.boys[Math.round(Math.random() * 5)])
+  if (name === 'girl') alert('Your baby name is : ' + this.state.girls[Math.round(Math.random() * 5)])  
+}  
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Names generateName={this.generateName} />
     </div>
   );
+}
 }
 
 export default App;
