@@ -8,8 +8,8 @@ state = { boys : [ 'kelvin','marley','seun','kanye','john','paul'] ,
 }
 
 generateName = (name) => {
-  if (name === 'boy') alert('Your baby name is : ' + this.state.boys[Math.round(Math.random() * 5)])
-  if (name === 'girl') alert('Your baby name is : ' + this.state.girls[Math.round(Math.random() * 5)])  
+  if (name === 'boy') alert('Your baby name is : ' + this.state.boys[Math.round(Math.random() * 5)]  + ', Congrats !!! ' )
+  if (name === 'girl') alert('Your baby name is : ' + this.state.girls[Math.round(Math.random() * 5)]  + ', Congrats !!! ')  
 }  
 
 render() {
