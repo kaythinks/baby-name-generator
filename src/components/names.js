@@ -29,7 +29,7 @@ componentDidMount() {
   .then(res => res.json())
   .then((data) => {
     console.log(data)
-    this.setState({ quotes: data[Math.round(Math.random() * 1642)] })
+    this.setState({ quotes: data[Math.round(Math.random() * data.length  )] })
     console.log(this.state.quotes)
   })
   .catch((err) => {
